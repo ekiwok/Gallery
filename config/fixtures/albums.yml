@@ -1,0 +1,13 @@
+albums:
+  -
+    uuid: '237bdd9c-4dad-4c51-9b7b-257b0786e6ec'
+    name: Cats
+  -
+    uuid: '0a81e587-4cfb-4d55-ad0e-c2dee60cf37f'
+    name: Dogs
+  -
+    uuid: 'aee7c4a8-895e-4108-abb5-225d0c0e3ef5'
+    name: Landscapes
+  -
+    uuid: 'e862dd4a-40ef-42b5-a6a6-bf9e219e4768'
+    name: Empty

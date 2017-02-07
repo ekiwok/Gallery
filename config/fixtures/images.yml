@@ -1,0 +1,53 @@
+images:
+  -
+    uuid: '9d68a156-a03c-4c37-b78e-9a2e88ea3939'
+    album: Cats
+    url: 'http://i.imgur.com/4qvLTIq.jpg'
+  -
+    uuid: 'e942fce0-a4fc-40eb-98a6-4c5d3721bfa6'
+    album: Cats
+    url: 'http://i.imgur.com/8CtNTmE.jpg'
+  -
+    uuid: '49eef99c-6ba5-4fd2-a616-b8564a5060df'
+    album: Cats
+    url: 'http://i.imgur.com/LZ6qDeN.jpg'
+  -
+    uuid: '27abb0b2-0bb2-4e9f-82fe-1cc0267db32d'
+    album: Cats
+    url: 'http://i.imgur.com/rQLjTWQ.jpg'
+  -
+    uuid: '52cfd5a2-2cac-4c07-b045-ea3df989be2b'
+    album: Cats
+    url: 'http://i.imgur.com/8gYGmb2.jpg'
+  -
+    uuid: '005e761f-34a3-4a56-be1a-77e2d4f153c1'
+    album: Cats
+    url: 'http://i.imgur.com/MfpfZHk.jpg'
+  -
+    uuid: '82bbf225-1d89-474d-8608-34420a2d1cf0'
+    album: Cats
+    url: 'http://i.imgur.com/t2XYZMu.jpg'
+  -
+    uuid: '95aa464a-64d6-40b4-8121-8151940e34d9'
+    album: Landscapes
+    url: 'http://i.imgur.com/9Zf83DC.jpg'
+  -
+    uuid: 'b11bf710-53b4-443d-8cba-400e140e24f5'
+    album: Landscapes
+    url: 'http://i.imgur.com/lY7gDxp.gif'
+  -
+    uuid: '00047143-d942-4e64-a283-9917a12cd169'
+    album: Dogs
+    url: 'http://i.imgur.com/vE6LtRQ.jpg'
+  -
+    uuid: '22e19322-948b-42d6-9a61-03084bda8711'
+    album: Dogs
+    url: 'http://i.imgur.com/1wT2YYg.jpg'
+  -
+    uuid: '70c8177b-90ae-4ff3-bbd3-3c5dd6ca4d1d'
+    album: Dogs
+    url: 'http://i.imgur.com/Ux0TbZJ.jpg'
+  -
+    uuid: '0410a4d6-0a98-4752-bde4-fd9a6354f071'
+    album: Dogs
+    url: 'http://i.imgur.com/rZ21NJd.jpg'

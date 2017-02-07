@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c9e25f1006d89f6651f11d282f24611",
+    "content-hash": "b3fbbc747e4ac66df2e78283919a297e",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -692,6 +692,40 @@
                 "orm"
             ],
             "time": "2016-12-18T15:42:34+00:00"
+        },
+        {
+            "name": "ekiwok/quick-fixtures",
+            "version": "0.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ekiwok/QuickFixtures.git",
+                "reference": "37ef37fb1b15bcd8500023204fcd81c1c3fc207b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ekiwok/QuickFixtures/zipball/37ef37fb1b15bcd8500023204fcd81c1c3fc207b",
+                "reference": "37ef37fb1b15bcd8500023204fcd81c1c3fc207b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/",
+                    "spec\\": "spec/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Generate complex fixtures based on @var annotations.",
+            "time": "2017-01-16T23:55:44+00:00"
         },
         {
             "name": "ircmaxell/password-compat",
