@@ -8,6 +8,21 @@ use Gallery\Model\UUID;
 class Image
 {
     /**
+     * @var UUID
+     */
+    private $uuid;
+
+    /**
+     * @var Album
+     */
+    private $album;
+
+    /**
+     * @var Url
+     */
+    private $url;
+
+    /**
      * @param UUID $uuid
      * @param Album $album
      * @param Url $url

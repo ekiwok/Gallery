@@ -7,6 +7,16 @@ use Gallery\Model\UUID;
 class Album
 {
     /**
+     * @var UUID
+     */
+    private $uuid;
+
+    /**
+     * @var string
+     */
+    private $name;
+
+    /**
      * @param UUID $uuid
      * @param string $name
      */

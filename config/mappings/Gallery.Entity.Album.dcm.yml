@@ -1,0 +1,9 @@
+Gallery\Entity\Album:
+  type: entity
+  id:
+    uuid:
+      type: uuid
+  fields:
+    name:
+      type: string
+

@@ -168,6 +168,7 @@ return [
          */
 
         //
+        LaravelDoctrine\ORM\DoctrineServiceProvider::class,
 
         /*
          * Application Service Providers...

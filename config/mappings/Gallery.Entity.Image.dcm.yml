@@ -1,0 +1,14 @@
+Gallery\Entity\Image:
+  type: entity
+  id:
+    uuid:
+      type: uuid
+  fields:
+    url:
+      type: url
+  manyToOne:
+    album:
+      targetEntity: Gallery\Entity\Album
+      joinColumn:
+        name: album_uuid
+        referencedColumnName: uuid
