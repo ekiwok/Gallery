@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('/', 'GalleryController@showAlbums');
+Route::resource('/album/{uuid}', 'AlbumController@showAlbumImages');

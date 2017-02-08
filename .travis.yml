@@ -13,6 +13,7 @@ before_script:
   - composer install
   - mysql -e 'CREATE DATABASE myapp_test;'
   - php artisan doctrine:schema:create
+  - php artisan doctrine:generate:proxies
   - php artisan app:load:fixtures
 
 script:

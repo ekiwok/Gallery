@@ -1,5 +1,6 @@
 Gallery\Entity\Image:
   type: entity
+  repositoryClass: App\Query\ImageQuery
   id:
     uuid:
       type: uuid

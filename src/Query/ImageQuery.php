@@ -12,12 +12,5 @@ interface ImageQuery
      *
      * @return Image[]
      */
-    public function findAlbumImages(UUID $albumUUID);
-
-    /**
-     * @param UUID $albumUUID
-     *
-     * @return integer
-     */
-    public function countImages(UUID $albumUUID);
+    public function findAllAlbumImages(UUID $albumUUID);
 }

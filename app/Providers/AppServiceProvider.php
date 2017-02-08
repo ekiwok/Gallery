@@ -6,7 +6,9 @@ use App\Repository\AlbumRepository;
 use App\Repository\ImageRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Gallery\Entity\Album;
+use Gallery\Entity\Image;
 use Gallery\Query\AlbumQuery;
+use Gallery\Query\ImageQuery;
 use Gallery\Repository\AlbumRepositoryInterface;
 use Gallery\Repository\ImageRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
@@ -38,6 +40,9 @@ class AppServiceProvider extends ServiceProvider
         });
         $this->app->bind(AlbumQuery::class, function () {
             return app(EntityManagerInterface::class)->getRepository(Album::class);
+        });
+        $this->app->bind(ImageQuery::class, function () {
+            return app(EntityManagerInterface::class)->getRepository(Image::class);
         });
     }
 }

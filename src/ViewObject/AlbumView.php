@@ -2,6 +2,7 @@
 
 namespace Gallery\ViewObject;
 
+use Gallery\Model\Url;
 use Gallery\Model\UUID;
 
 class AlbumView
