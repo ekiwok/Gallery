@@ -1,5 +1,7 @@
 <?php
 
+use Doctrine\ORM\EntityManagerInterface;
+
 abstract class TestCase extends Illuminate\Foundation\Testing\TestCase
 {
     /**
@@ -8,6 +10,38 @@ abstract class TestCase extends Illuminate\Foundation\Testing\TestCase
      * @var string
      */
     protected $baseUrl = 'http://localhost';
+
+    /**
+     * @var \Doctrine\DBAL\Connection
+     */
+    static protected $connection;
+
+    static public function setUpBeforeClass()
+    {
+        parent::setUpBeforeClass();
+    }
+
+    public function setUp()
+    {
+        parent::setUp();
+
+        if (!self::$connection) {
+            return;
+        }
+
+        if (!self::$connection->isConnected()) {
+            self::$connection->connect();
+        }
+
+        self::$connection->beginTransaction();
+    }
+
+    static public function tearDownAfterClass()
+    {
+        if (self::$connection && self::$connection->isTransactionActive()) {
+            self::$connection->rollBack();
+        }
+    }
 
     /**
      * Creates the application.
@@ -19,6 +53,9 @@ abstract class TestCase extends Illuminate\Foundation\Testing\TestCase
         $app = require __DIR__.'/../bootstrap/app.php';
 
         $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
+
+        $em = app(EntityManagerInterface::class);
+        self::$connection = $em->getConnection();
 
         return $app;
     }

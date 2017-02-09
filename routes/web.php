@@ -13,3 +13,4 @@
 
 Route::resource('/', 'GalleryController@showAlbums');
 Route::resource('/album/{uuid}', 'AlbumController@showAlbumImages');
+Route::post('/api/albums', 'ApiController@postAlbum');
