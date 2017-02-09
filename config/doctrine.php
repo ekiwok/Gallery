@@ -144,7 +144,7 @@ return [
     | - LaravelDoctrine\ORM\Loggers\FileLogger
     |--------------------------------------------------------------------------
     */
-    'logger'                     => env('DOCTRINE_LOGGER', false),
+    'logger'                     => env('DOCTRINE_LOGGER', 'LaravelDoctrine\ORM\Loggers\FileLogger'),
     /*
     |--------------------------------------------------------------------------
     | Cache

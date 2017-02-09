@@ -13,3 +13,4 @@ Gallery\Entity\Image:
       joinColumn:
         name: album_uuid
         referencedColumnName: uuid
+      orphanRemoval: true

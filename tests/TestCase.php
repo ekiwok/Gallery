@@ -19,11 +19,6 @@ abstract class TestCase extends Illuminate\Foundation\Testing\TestCase
     static public function setUpBeforeClass()
     {
         parent::setUpBeforeClass();
-    }
-
-    public function setUp()
-    {
-        parent::setUp();
 
         if (!self::$connection) {
             return;

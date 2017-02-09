@@ -11,6 +11,8 @@
 |
 */
 
-Route::resource('/', 'GalleryController@showAlbums');
-Route::resource('/album/{uuid}', 'AlbumController@showAlbumImages');
+Route::get('/', 'GalleryController@showAlbums');
+Route::get('/album/{uuid}', 'AlbumController@showAlbumImages');
 Route::post('/api/albums', 'ApiController@postAlbum');
+Route::delete('/api/albums/{uuid}', 'ApiController@removeAlbum');
+Route::post('/api/albums/{uuid}', 'ApiController@addImage');

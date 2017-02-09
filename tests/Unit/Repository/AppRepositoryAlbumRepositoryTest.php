@@ -1,13 +1,14 @@
 <?php
 
 use App\Repository\AlbumRepository;
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\AbstractQuery;
+use Doctrine\ORM\EntityManagerInterface;
 use Gallery\Entity\Album;
 
 class AppRepositoryAlbumRepositoryTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var ObjectManager|\PHPUnit_Framework_MockObject_MockObject
+     * @var EntityManagerInterface|\PHPUnit_Framework_MockObject_MockObject
      */
     private $objectManager;
 
@@ -18,8 +19,12 @@ class AppRepositoryAlbumRepositoryTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->objectManager = $this->createMock(ObjectManager::class);
+        $this->objectManager = $this->createMock(EntityManagerInterface::class);
         $this->repository = new AlbumRepository($this->objectManager);
+
+        $this->objectManager
+            ->method('createQuery')
+            ->willReturn($this->createMock(AbstractQuery::class));
     }
 
     public function testAdd()

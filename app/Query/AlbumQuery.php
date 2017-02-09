@@ -15,7 +15,7 @@ class AlbumQuery extends EntityRepository implements AlbumQueryInterface
     public function findAllAlbums()
     {
         $query = $this->_em->getConnection()->query('
-          SELECT a.uuid, a.name, COUNT(i.uuid), MAX(i.url)
+          SELECT a.uuid, a.name, COUNT(i.uuid)
           FROM albums a LEFT JOIN images i on i.album_uuid = a.uuid
           GROUP BY a.uuid
           ');

@@ -1,16 +1,13 @@
 <?php
 
 use App\Repository\ImageRepository;
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Gallery\Entity\Image;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class AppRepositoryImageRepositoryTest extends TestCase
 {
     /**
-     * @var ObjectManager|\PHPUnit_Framework_MockObject_MockObject
+     * @var EntityManagerInterface|\PHPUnit_Framework_MockObject_MockObject
      */
     private $objectManager;
 
@@ -21,7 +18,7 @@ class AppRepositoryImageRepositoryTest extends TestCase
 
     public function setUp()
     {
-        $this->objectManager = $this->createMock(ObjectManager::class);
+        $this->objectManager = $this->createMock(EntityManagerInterface::class);
         $this->repository = new ImageRepository($this->objectManager);
     }
 

@@ -17,11 +17,14 @@
     <div class="col-md-6">
         <div class="panel panel-default">
             <div class="panel-body">
-                <a href="">
-                    <h1 class="text-center">
-                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                    </h1>
-                </a>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="album-name" placeholder="New album name">
+                    </div>
+                    <button type="submit" id="create-album" class="btn btn-default" data-action="/api/albums">
+                        Create
+                    </button>
+                </form>
             </div>
         </div>
     </div>

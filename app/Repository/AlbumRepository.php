@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use Gallery\Entity\Album;
+use Gallery\Entity\Image;
 use Gallery\Repository\AlbumRepositoryInterface;
 
 class AlbumRepository extends AbstractDoctrineRepository implements AlbumRepositoryInterface
@@ -20,6 +21,10 @@ class AlbumRepository extends AbstractDoctrineRepository implements AlbumReposit
      */
     public function remove(Album $album)
     {
+        $query = $this->objectManager->createQuery(sprintf('DELETE FROM %s i WHERE i.album = :uuid', Image::class));
+        $query->setParameter('uuid', (string) $album->getUuid());
+        $query->execute();
+
         $this->concreteRemove($album);
     }
 }

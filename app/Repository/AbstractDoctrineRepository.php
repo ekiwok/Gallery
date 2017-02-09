@@ -3,18 +3,19 @@
 namespace App\Repository;
 
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManagerInterface;
 
 abstract class AbstractDoctrineRepository
 {
     /**
-     * @var ObjectManager
+     * @var EntityManagerInterface
      */
     protected $objectManager;
 
     /**
-     * @param ObjectManager $objectManager
+     * @param EntityManagerInterface $objectManager
      */
-    public function __construct(ObjectManager $objectManager)
+    public function __construct(EntityManagerInterface $objectManager)
     {
         $this->objectManager = $objectManager;
     }
