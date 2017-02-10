@@ -37,6 +37,6 @@ class AlbumController
 
         $images = $this->images->findAllAlbumImages($album->getUuid());
 
-        return view('album', compact('images'));
+        return view('album', compact('images', 'albumUuid'));
     }
 }

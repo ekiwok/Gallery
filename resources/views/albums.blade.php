@@ -8,6 +8,9 @@
                 <a href="/album/{{ $album->getUuid() }}">
                     <h1>
                         {{ $album->getName() }} <span class="badge"> {{ $album->getCount() }} </span>
+                        <a href="/api/albums/{{ $album->getUuid() }}" class="remove-album">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </a>
                     </h1>
                 </a>
             </div>
