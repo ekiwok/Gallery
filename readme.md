@@ -6,8 +6,7 @@
 composer install
 cp .env.example .env
 
-# If necessary add user/host/etc. parameters
-mysql -e 'CREATE DATABASE myapp_test;' 
+mysql -uhomestead -psecret -e 'CREATE DATABASE homestead;' 
 
 php artisan doctrine:schema:create
 php artisan doctrine:generate:proxies
