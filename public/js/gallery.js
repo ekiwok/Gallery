@@ -65,8 +65,6 @@
         return this;
     })();
 
-    window.app = app;
-
     $(document).on('click', createAlbumBtn, app.createAlbum);
     $(document).on('click', removeAlbumBtn, app.removeAlbum);
     $(document).on('click', addImageBtn, app.addImage);
