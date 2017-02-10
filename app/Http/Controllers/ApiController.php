@@ -96,6 +96,6 @@ class ApiController extends BaseController
      */
     private function createUuid()
     {
-        return new UUID( (string) $this->uuidFactory->uuid4());
+        return new UUID((string) $this->uuidFactory->uuid4());
     }
 }

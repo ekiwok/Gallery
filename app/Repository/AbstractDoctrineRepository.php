@@ -31,5 +31,4 @@ abstract class AbstractDoctrineRepository
         $this->objectManager->remove($obj);
         $this->objectManager->flush();
     }
-
 }

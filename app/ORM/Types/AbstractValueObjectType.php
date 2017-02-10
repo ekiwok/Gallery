@@ -40,5 +40,4 @@ abstract class AbstractValueObjectType extends Type
     {
         return static::NAME;
     }
-
 }
